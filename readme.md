@@ -7,6 +7,11 @@ While you should solve your responsiveness issues with css,
 sometimes you just need to render different components depending
 on the display type.
 
+######Install
+```
+npm install react-getscreen --save
+```
+
 ######Example
 
 ```

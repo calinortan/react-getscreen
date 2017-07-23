@@ -1,6 +1,6 @@
 {
   "name": "react-getscreen",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A react higher order component which provides some methods to determine your screen type",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
