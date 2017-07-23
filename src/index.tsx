@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as _ from 'lodash'
 
 export interface withGetScreenOptions {
   mobileLimit: Number,
@@ -25,6 +26,7 @@ export function withGetScreen<T>(WrappedComp: React.ComponentClass<T>, options =
   return class extends React.Component<T, withGetScreenState> {
     constructor() {
       super();
+      this.onResize = _.throttle(this.onResize, 100);
       this.state = {
         currentSize: this.getSize(window.innerWidth)
       }
@@ -35,10 +37,11 @@ export function withGetScreen<T>(WrappedComp: React.ComponentClass<T>, options =
       }
     }
     componentWillUnmount() {
+      this.onResize.cancel()
       window.removeEventListener('resize', this.onResize);
     }
 
-    onResize = () => {
+    onResize: any = () => {
       const newSize = this.getSize(window.innerWidth);
       if (newSize !== this.state.currentSize) {
         this.setState({
