@@ -4,6 +4,10 @@
   "description": "A react higher order component which provides some methods to determine your screen type",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calinortan/react-getscreen.git"
+  },
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
