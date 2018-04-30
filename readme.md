@@ -1,4 +1,4 @@
-###REACT-GETSCREEN
+### REACT-GETSCREEN
 
 This package provides a React higher order component which adds
 some useful methods to your wrapped components in order to
@@ -7,12 +7,12 @@ While you should solve your responsiveness issues with css,
 sometimes you just need to render different components depending
 on the display type.
 
-######Install
+###### Install
 ```
 npm install react-getscreen --save
 ```
 
-######Example
+###### Example
 
 ```
 import React, { Component } from 'react';
